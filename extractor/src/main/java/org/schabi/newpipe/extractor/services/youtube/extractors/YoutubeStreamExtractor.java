@@ -848,11 +848,9 @@ public class YoutubeStreamExtractor extends StreamExtractor {
         final PoTokenResult androidPoTokenResult = noPoTokenProviderSet ? null
                 : poTokenProviderInstance.getAndroidClientPoToken(videoId);
 
-        fetchAndroidClient(localization, contentCountry, videoId, androidPoTokenResult);
-                
-        if (isSabrOnlyStreamingData(androidStreamingData)) {
-            fetchAndroidVRClient(localization, contentCountry, videoId);
-        }
+        
+        fetchAndroidVRClient(localization, contentCountry, videoId);
+        
 
         setStreamType();
 
